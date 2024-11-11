@@ -2,7 +2,7 @@
 ARG VERSION=3.12.6
 ARG BUILDER=docker.io/library/python
 FROM ${BUILDER}:${VERSION}-slim AS python-base
-
+# Install build dependencies
 # Install build dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
     build-essential \
